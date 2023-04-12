@@ -1,0 +1,562 @@
+/* Main background color of the website */
+html
+{
+    background-color: #3D95E7;
+    height: 100%;
+    width: 100%;
+}
+
+/* Margin: 0 to remove the gaps on the edges of the page. Set parent container height and width. */
+body
+{
+    margin: 0;
+    width:100%;
+    min-width:300px;
+    height:100%;
+    background-color: white;
+}
+
+/* Percents used to fit different resolutions */
+header
+{
+    height: 12%;
+    width: 100%;
+    display:flex;
+    background-color: #3D95E7;
+}
+
+/* Brand name in the header "STUDENTLINK" */
+.brandName
+{
+    color:white;
+    display: flex;
+    height: 100%;
+    position: relative;
+    left: 5%;
+    font-size: 125%;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    z-index:1;
+}
+
+.brandName a
+{
+    text-decoration: none;
+    color:white;
+}
+
+/* Navigation bar elements */
+.navBar
+{
+    color:white;
+    display:flex;
+    align-items: center;
+    position: relative;
+    height: 100%;
+    left: 20%;
+    font-size: 115%;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    z-index: 0;
+}
+
+.navBar ul 
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.navBar li 
+{
+    margin-right: 70px;
+}
+
+.navBar ul li a:last-child 
+{
+    margin-right: 0;
+}
+
+.navBar ul li a
+{
+    text-decoration: none;
+    color:white;
+}
+
+.navBar ul li a:hover
+{
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 2px;
+    padding-bottom: 3px;
+    color:white;
+    
+}
+
+/* Login and sign up header navigation */
+.signUp
+{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    height: 100%;
+    font-size: 115%;
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    left: 37%;
+    z-index:1;
+}
+
+.signUp ul
+{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.signUp a
+{
+    margin-right: 6px;
+    margin-top:10%;
+    color:white;
+    text-decoration: none;
+}
+
+.signUp a:hover
+{
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 2px;
+    padding-bottom: 3px;
+    color:white;
+}
+
+/* Footer CSS begins */
+
+footer
+{
+    position: fixed;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 16%;
+    background-color: #3D95E7;
+}
+
+.footerProduct
+{
+    color:white;
+    display:flex;
+    height:100%;
+    margin-left:15%;
+}
+
+.footerProduct ul
+{
+    list-style: none;
+}
+
+.footerProduct ul li:first-child
+{
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size:large;
+    padding-top:0%;
+}
+
+.footerProduct ul li
+{
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    padding-top:5%;
+}
+
+.footerProduct ul li a
+{
+    color:white;
+    text-decoration: none;
+}
+
+.footerProduct ul li a:hover
+{
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 2px;
+    padding-bottom: 3px;
+    color:white;
+}
+
+.footerSupport
+{
+    color:white;
+    display:flex;
+    height:100%;
+}
+
+.footerSupport ul
+{
+    list-style: none;
+}
+
+.footerSupport ul li:first-child
+{
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size:large;
+    padding-top:0%;
+}
+
+.footerSupport ul li
+{
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    padding-top:5%;
+}
+
+.footerSupport ul li a
+{
+    color:white;
+    text-decoration: none;
+}
+
+.footerSupport ul li a:hover
+{
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 2px;
+    padding-bottom: 3px;
+    color:white;
+}
+
+.footerResources
+{
+    color:white;
+    display:flex;
+    height:100%;
+}
+
+.footerResources ul
+{
+    list-style: none;
+}
+
+.footerResources ul li:first-child
+{
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size:large;
+    padding-top:0%;
+}
+
+.footerResources ul li
+{
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    padding-bottom: 5%;
+}
+
+.footerConnect
+{
+    color:white;
+    display:flex;
+    margin-right:15%;
+    height: 100%;
+}
+
+.footerConnect ul
+{
+    list-style: none;
+}
+
+.footerConnect ul li:first-child
+{
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size:large;
+    padding-top: 0%;
+}
+
+.footerConnect ul li
+{
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 400;
+    font-display: swap;
+    padding-top: 5%;
+}
+
+/* Footer CSS ends */
+
+/* Start of home page */
+/* CSS for home image */
+
+.container
+{
+    width:100%;
+    height: 72%;
+}
+
+.happyStudent
+{
+    height:100%;
+    align-items: center;
+    width: 50%;
+    display:inline-flex;
+    align-items: center;
+}
+
+.happyStudent img
+{
+    width:95%;
+    height: 80%;
+}
+
+/* Home page inspirational text */
+.grid-container-north
+{
+    color:black;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    width:100%;
+    height:100%;
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    font-size: 48px;
+}
+
+.container-right
+{
+    width:50%;
+    display: inline-flex;
+    float:right;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top 
+{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.middle 
+{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.bottom 
+{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+/* End of home page text */
+
+/* Home page Get Started button */
+
+.rounded-button 
+{
+    border-radius: 50px; 
+    padding: 10px 20px; 
+    background-color: #D78940;
+    color: white; 
+    border: none; 
+    font-size: 16px; 
+    width:200px;
+    height:80px;
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    font-size: 26px;
+}
+
+.rounded-button a
+{
+    color:white;
+    text-decoration: none;
+}
+
+.button-container-south
+{
+    width:100%;
+    height:82%;
+    display:inline-block;
+    text-align: center;
+}
+
+/* End of home page */
+
+/* Begin About page CSS */
+
+.grayDiv
+{
+    background-color: #EAEAEA;
+    height: 72%;
+    width: 100%;
+}
+
+.whiteDiv
+{
+    background-color: white;
+    width: 45%;
+    height: 88%;
+    margin: 0 auto;
+    padding:40px;
+}
+
+.aboutHeader
+{
+    margin-top:0;
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+.aboutPara
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.faqHeader
+{
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+.faqList li
+{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 4%;
+}
+
+.faqList
+{
+    list-style: none;
+    padding-left:0;
+}
+
+/* End about page CSS */
+
+/* Begin login page CSS */
+
+.login-form
+{
+    height: 100%;
+    width: 60%;
+    margin-bottom:20%;
+}
+
+.loginContainer h1
+{
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom:9%;
+}
+
+.loginContainer
+{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form form 
+{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 16px #c9c6c6;
+    height:100%;
+    border: 1px solid #3D95E7;
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    z-index:2;
+    position:relative;
+}
+
+.login-form form h2
+{
+    text-align: center;
+    padding-bottom:20px;
+}
+
+.login-form label 
+{
+    display: block;
+    margin-bottom: 10px;
+    margin-left:70px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] 
+{
+  width: 60%;
+  padding: 10px;
+  border-radius: 3px;
+  border:1px solid #3D95E7;
+  margin-bottom: 20px;
+  margin-left:70px;
+}
+
+.login-form button[type="submit"] 
+{
+    background-color: #D78940;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    width:80px;
+    font-size:16px;
+}

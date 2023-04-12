@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home - STUDENTLINK
+{% endblock %}
+
+{% block body %}
+    
+    <div class="container">
+        <div class="happyStudent">      
+            <img src="{{ url_for('static', filename='images/happystudent.png') }}" alt="Happy student">
+        </div>
+        <div class="container-right">
+            <div class="grid-container-north">
+                <div class="top">Ask.</div>
+                <div class="middle">Learn.</div>
+                <div class="bottom">Excel.</div>
+            </div>
+            <div class="button-container-south">
+                <button class="rounded-button"><a href="{{ url_for('signup') }}">Get Started</a></button>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
