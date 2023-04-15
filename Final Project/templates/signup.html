@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sign up - STUDENTLINK
+{% endblock %}
+
+{% block body %}
+<div class="grayDiv">
+    <div class="whiteDiv">
+        <div class="signupContainer">
+            <h1>Sign up</h1>
+            <div class="signup-form">
+                <form>
+                    <h2>Sign up for SL</h2>
+                    <label for="email">Email:</label>
+                    <input type="text" id="signupEmail" name="email" required>
+                    <label for="username">Username:</label>
+                    <input type="text" id="userName" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" id="signupPassword" name="password" required>
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <p id="password-match-error" style="display:none">Passwords do not match.</p>
+                    <button type="submit">Sign up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/confirmpassword.js') }}"></script>
+{% endblock %}

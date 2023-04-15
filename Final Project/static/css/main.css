@@ -1,37 +1,49 @@
+
+/* Begin layout page CSS */
 /* Main background color of the website */
+
 html
 {
     background-color: #3D95E7;
     height: 100%;
     width: 100%;
+    overflow:hidden;
 }
 
-/* Margin: 0 to remove the gaps on the edges of the page. Set parent container height and width. */
+/* Margin: 0 to remove the gaps on the edges of the page. */
+
 body
 {
-    margin: 0;
-    width:100%;
-    min-width:300px;
-    height:100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    margin:0;
     background-color: white;
 }
 
 /* Percents used to fit different resolutions */
+
 header
 {
     height: 12%;
     width: 100%;
     display:flex;
+    position: relative;
     background-color: #3D95E7;
+    overflow:auto;
 }
 
 /* Brand name in the header "STUDENTLINK" */
+
 .brandName
 {
     color:white;
     display: flex;
     height: 100%;
-    position: relative;
+    position: absolute;
     left: 5%;
     font-size: 125%;
     font-weight: bold;
@@ -47,14 +59,16 @@ header
 }
 
 /* Navigation bar elements */
+
 .navBar
 {
     color:white;
     display:flex;
     align-items: center;
-    position: relative;
+    position: absolute;
     height: 100%;
-    left: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 115%;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
@@ -92,22 +106,22 @@ header
     text-decoration-thickness: 2px;
     padding-bottom: 3px;
     color:white;
-    
 }
 
 /* Login and sign up header navigation */
+
 .signUp
 {
     color:white;
     display: flex;
+    position: absolute;
     flex-direction: row;
-    position:relative;
     height: 100%;
     font-size: 115%;
     font-weight: bold;
     font-family: 'Inter', sans-serif;
     font-style: normal;
-    left: 37%;
+    left: 88%;
     z-index:1;
 }
 
@@ -126,13 +140,58 @@ header
     text-decoration: none;
 }
 
-.signUp a:hover
+.signUp ul li:not(:nth-child(2)):hover
 {
     text-decoration: underline;
     text-underline-position: under;
     text-decoration-thickness: 2px;
     padding-bottom: 3px;
     color:white;
+}
+
+.signUp ul li:nth-child(2) {
+    cursor: default;
+  }
+
+  /* Query to fit all nav elements within the overflow when fully zoomed in */
+  @media (min-resolution: 300dpi) 
+{
+      .navBar 
+      {
+        font-size: 6px;
+        z-index:2;
+      }
+  
+      .navBar ul li 
+      {
+        margin-right: 35px;
+      }
+  
+      .navBar ul li a:last-child 
+      {
+        margin-right: 0;
+      }
+  
+      .navBar ul li a:hover
+      {
+        text-decoration: none;
+        color:black;
+      }
+  
+      .signUp a
+      {
+        font-size:6px;
+      }
+  
+      .signUp ul li:not(:nth-child(2)):hover
+      {
+        text-decoration: none;
+      }
+
+      .signUp ul li a:hover
+      {
+        color:black;
+      }
 }
 
 /* Footer CSS begins */
@@ -147,6 +206,7 @@ footer
     width: 100%;
     height: 16%;
     background-color: #3D95E7;
+    overflow:auto;
 }
 
 .footerProduct
@@ -270,6 +330,21 @@ footer
     padding-bottom: 5%;
 }
 
+.footerResources ul li a
+{
+    color:white;
+    text-decoration: none;
+}
+
+.footerResources ul li a:hover
+{
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 2px;
+    padding-bottom: 3px;
+    color:white;
+}
+
 .footerConnect
 {
     color:white;
@@ -302,14 +377,17 @@ footer
 }
 
 /* Footer CSS ends */
+/* End of layout page CSS */
 
-/* Start of home page */
+/* Begin home page CSS */
 /* CSS for home image */
 
 .container
 {
     width:100%;
-    height: 72%;
+    position: relative;
+    overflow: auto;
+    height: calc(100vh - 28%);
 }
 
 .happyStudent
@@ -351,7 +429,7 @@ footer
     display: inline-flex;
     float:right;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 .top 
@@ -402,14 +480,14 @@ footer
 .button-container-south
 {
     width:100%;
-    height:82%;
+    height:28%;
     display:inline-block;
     text-align: center;
 }
 
-/* End of home page */
+/* End of home page CSS */
 
-/* Begin About page CSS */
+/* Begin about page CSS */
 
 .grayDiv
 {
@@ -422,14 +500,19 @@ footer
 {
     background-color: white;
     width: 45%;
-    height: 88%;
+    height: 100%;
     margin: 0 auto;
-    padding:40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    position: relative;
+    overflow: auto;
+    height: calc(100vh - 39%);
 }
 
 .aboutHeader
 {
     margin-top:0;
+    padding-top: 3%;
     font-family: 'Inter', sans-serif;
     font-style:  normal;
     font-weight: 700;
@@ -515,6 +598,7 @@ footer
     font-display: swap;
     z-index:2;
     position:relative;
+    overflow:auto;
 }
 
 .login-form form h2
@@ -533,7 +617,7 @@ footer
 .login-form input[type="text"],
 .login-form input[type="password"] 
 {
-  width: 60%;
+  width: 65%;
   padding: 10px;
   border-radius: 3px;
   border:1px solid #3D95E7;
@@ -560,3 +644,196 @@ footer
     width:80px;
     font-size:16px;
 }
+
+/* End login page CSS */
+
+/* Begin sign up page CSS */
+
+.signup-form
+{
+    height: 100%;
+    width: 60%;
+    margin-bottom:20%;
+}
+
+.signupContainer h1
+{
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    font-size: 42px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.signupContainer
+{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form form 
+{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 16px #c9c6c6;
+    height:100%;
+    border: 1px solid #3D95E7;
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    z-index:2;
+    position:relative;
+    overflow:auto;
+}
+
+.signup-form form h2
+{
+    text-align: center;
+    padding-bottom:20px;
+}
+
+.signup-form label 
+{
+    display: block;
+    margin-bottom: 10px;
+    margin-left:70px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="password"] 
+{
+  width: 65%;
+  padding: 10px;
+  border-radius: 3px;
+  border:1px solid #3D95E7;
+  margin-bottom: 20px;
+  margin-left:70px;
+}
+
+.signup-form button[type="submit"] 
+{
+    background-color: #D78940;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    width:80px;
+    font-size:16px;
+}
+
+/* End sign up page CSS */
+
+/* Begin contact page CSS */
+
+.contact-form
+{
+    height: 100%;
+    width: 60%;
+    margin-bottom:20%;
+}
+
+.contactContainer h1
+{
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom:9%;
+}
+
+.contactContainer
+{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form form 
+{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 16px #c9c6c6;
+    height:100%;
+    border: 1px solid #3D95E7;
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    z-index:2;
+    position:relative;
+    overflow:auto;
+}
+
+.contact-form label 
+{
+    display: block;
+    margin-bottom: 10px;
+    margin-left:70px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="password"]
+{
+  width: 65%;
+  padding: 10px;
+  border-radius: 3px;
+  border:1px solid #3D95E7;
+  margin-bottom: 20px;
+  margin-left:70px;
+}
+
+.contact-form button[type="submit"] 
+{
+    background-color: #D78940;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Inter', sans-serif;
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    width:80px;
+    font-size:16px;
+}
+
+#textBox
+{
+    width: 65%;
+    padding: 10px;
+    border-radius: 3px;
+    border:1px solid #3D95E7;
+    margin-bottom: 20px;
+    margin-left:70px;
+    resize: none;
+}
+
+/* End contact page CSS */
